@@ -1,12 +1,13 @@
 package main
 
+import (
+	"fmt"
+	"url-shortener/internal/config"
+)
+
 func main() {
-	/*
-		init config: cleanenv
-		init logger: slog
-		init storage: sqlite
-		init router: chi / "chi render"
-		run server
-	*/
+	// Получаем содержимое конфига
+	cfg := config.MustLoad()
+	fmt.Println(cfg)
 
 }
